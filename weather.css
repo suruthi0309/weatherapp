@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherForm {
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cityInput {
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80vw;
+  transition: border-color 0.3s ease;
+}
+
+.cityInput:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: hsl(122, 39%, 50%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(122, 39%, 40%);
+}
+
+.card {
+  background: linear-gradient(to bottom, hsl(210, 100%, 95%), hsl(39, 100%, 90%));
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  min-height: 300px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.cityDisplay {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.tempDisplay {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #222;
+  margin: 10px 0;
+}
+
+.humidityDisplay {
+  font-size: 1.3rem;
+  color: #444;
+  margin: 8px 0;
+}
+
+.descDisplay {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #666;
+  margin: 8px 0;
+}
+
+.weatherEmoji {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.errorDisplay {
+  font-size: 1.1rem;
+  color: #e63946;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
